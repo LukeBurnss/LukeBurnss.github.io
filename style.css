@@ -1,13 +1,4 @@
-/*
- * This is a comment in CSS.
- * Here's a quick summary of the changes:
- * - We are now targeting the .project-row class to apply Flexbox properties.
- * - We are using a new, combined selector to style both projects at once.
- * - The video container is now styled more generically to work with any video container you add.
- */
-
-/* ## Basic Styling
--------------------------------------------------- */
+/* -------------------------- Styling -------------------------- */
 body {
     font-family: 'Arimo', sans-serif;
     margin: 0;
@@ -18,24 +9,22 @@ body {
 
 h1 {
     text-align: center;
-    color: #9d9fa1; /* Corrected: You were missing the 'color' property here */
+    color: #9d9fa1; 
 }
 
-/* ## Project Layout
--------------------------------------------------- */
-/* This rule will make each project row lay out horizontally */
+/* -------------------------- Project Layout -------------------------- */
 .project-row {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 40px; /* Space between the project rows */
+    margin-bottom: 40px; 
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* We can combine the selectors for both projects to avoid repetition */
+
 .DES315-description, .CMP302-description {
     flex: 2;
     padding: 20px;
@@ -53,10 +42,9 @@ h1 {
     align-items: center;
 }
 
-/* ## Typography
--------------------------------------------------- */
+/* -------------------------- Typography --------------------------*/
 .DES315-description p,
-.CMP302-description p { /* We target the paragraphs specifically */
+.CMP302-description p { 
     font-size: 22px;
 }
     
@@ -68,9 +56,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* ## Video & Links
--------------------------------------------------- */
-/* Use a generic selector for all video containers */
+/* -------------------------- Video & Links -------------------------- */
 .video-container-1,
 .video-container-2 {
     position: relative;

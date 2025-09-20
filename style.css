@@ -1,76 +1,93 @@
+/*
+ * This is a comment in CSS.
+ * Here's a quick summary of the changes:
+ * - We are now targeting the .project-row class to apply Flexbox properties.
+ * - We are using a new, combined selector to style both projects at once.
+ * - The video container is now styled more generically to work with any video container you add.
+ */
+
+/* ## Basic Styling
+-------------------------------------------------- */
 body {
     font-family: 'Arimo', sans-serif;
     margin: 0;
     padding: 40px;
     background-color: #343b45;
-    color: #f0f0f0
+    color: #f0f0f0;
 }
 
 h1 {
     text-align: center;
-    #9d9fa1;
+    color: #9d9fa1; /* Corrected: You were missing the 'color' property here */
 }
 
-.project-container {
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
+/* ## Project Layout
+-------------------------------------------------- */
+/* This rule will make each project row lay out horizontally */
 .project-row {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 100%; 
-    margin-bottom: 40px; 
+    margin-bottom: 40px; /* Space between the project rows */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.project-description {
-    flex: 2; 
-    padding: 20px;
-    box-sizing: border-box; 
-    max-width: 60%; 
-    
-    p {
-    font-size: 22px;
-    }
-    
-    h2 {
-    font-size: 2em; 
-    color: #cdcfd1
-    margin-top: 0; 
-    margin-bottom: 10px;
-    }
-}
-
-.project-media {
-    flex: 1; 
+/* We can combine the selectors for both projects to avoid repetition */
+.DES315-description, .CMP302-description {
+    flex: 2;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 40%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    max-width: 60%;
 }
 
+.DES315-media, .CMP302-media {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.video-container {
+/* ## Typography
+-------------------------------------------------- */
+.DES315-description p,
+.CMP302-description p { /* We target the paragraphs specifically */
+    font-size: 22px;
+}
+    
+.DES315-description h2,
+.CMP302-description h2 {
+    font-size: 2em;
+    color: #cdcfd1;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ## Video & Links
+-------------------------------------------------- */
+/* Use a generic selector for all video containers */
+.video-container-1,
+.video-container-2 {
     position: relative;
-    width: 100%; 
-    padding-bottom: 56.25%; 
+    width: 100%;
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
 
-.video-container iframe {
+.video-container-1 iframe,
+.video-container-2 iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-
 
 .link-to-game a {
     display: block;

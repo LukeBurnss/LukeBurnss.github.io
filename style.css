@@ -11,15 +11,6 @@ h1 {
     color: #333;
 }
 
-
-.project-description h2 {
-    font-size: 2em; 
-    color: #333;
-    margin-top: 0; 
-    margin-bottom: 10px;
-}
-
-
 .project-container {
     display: flex;
     justify-content: center; 
@@ -35,6 +26,13 @@ h1 {
     padding: 20px;
     box-sizing: border-box; 
     max-width: 60%; 
+
+    h2 {
+    font-size: 2em; 
+    color: #333;
+    margin-top: 0; 
+    margin-bottom: 10px;
+}
 }
 
 .project-media {

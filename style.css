@@ -1,4 +1,4 @@
-/* Basic styling for the entire page */
+/* Basic styling */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -14,29 +14,35 @@ h1 {
 /* Flexbox container for the two columns */
 .project-container {
     display: flex;
-    justify-content: space-around; /* Distributes space between items */
-    align-items: flex-start; /* Aligns items to the top */
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    margin-top: 20px;
+    justify-content: center; /* This will center the entire container */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px auto; /* This centers the container horizontally on the page */
+    max-width: 1200px; /* You can set a max-width for the entire layout */
 }
 
-/* Styling for the left and right columns */
-.project-description, .project-media {
-    flex: 1; /* Allows columns to grow equally */
-    padding: 20px;
-}
-
+/* Updated styling for the left and right columns */
 .project-description {
-    max-width: 50%; /* You can adjust this width as needed */
+    flex: 2; /* Gives this column more space */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't add to the total width */
+    max-width: 60%; /* A specific max-width for the text */
 }
 
 .project-media {
-    max-width: 50%;
+    flex: 1; /* Gives this column less space */
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 40%; /* A specific max-width for the video */
+    display: flex; /* Use flexbox to center content inside this column */
+    flex-direction: column;
+    align-items: center; /* This centers the video and link within the column */
 }
 
 /* Ensures the YouTube video scales correctly */
 .video-container {
     position: relative;
+    width: 100%; /* The container will take up 100% of the media column's width */
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;

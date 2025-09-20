@@ -11,39 +11,47 @@ h1 {
     color: #333;
 }
 
-/* Flexbox container for the two columns */
-.project-container {
-    display: flex;
-    justify-content: center; /* This will center the entire container */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 20px auto; /* This centers the container horizontally on the page */
-    max-width: 1200px; /* You can set a max-width for the entire layout */
+
+.project-description h2 {
+    font-size: 2em; 
+    color: #333;
+    margin-top: 0; 
+    margin-bottom: 10px;
 }
 
-/* Updated styling for the left and right columns */
+
+.project-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px auto; 
+    max-width: 1200px; 
+}
+
+
 .project-description {
-    flex: 2; /* Gives this column more space */
+    flex: 2; 
     padding: 20px;
-    box-sizing: border-box; /* Ensures padding doesn't add to the total width */
-    max-width: 60%; /* A specific max-width for the text */
+    box-sizing: border-box; 
+    max-width: 60%; 
 }
 
 .project-media {
-    flex: 1; /* Gives this column less space */
+    flex: 1; 
     padding: 20px;
     box-sizing: border-box;
-    max-width: 40%; /* A specific max-width for the video */
-    display: flex; /* Use flexbox to center content inside this column */
+    max-width: 40%; 
+    display: flex;
     flex-direction: column;
-    align-items: center; /* This centers the video and link within the column */
+    align-items: center; 
 }
 
-/* Ensures the YouTube video scales correctly */
+
 .video-container {
     position: relative;
-    width: 100%; /* The container will take up 100% of the media column's width */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    width: 100%; 
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
 }
@@ -56,7 +64,7 @@ h1 {
     height: 100%;
 }
 
-/* Styling for the itch.io link */
+
 .link-to-game a {
     display: block;
     text-align: center;

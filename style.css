@@ -124,14 +124,14 @@ nav a {
     background-color: var(--card-bg);
     margin-bottom: 40px; 
     border-radius: 8px;
-    overflow: hidden; /* Keeps content inside rounded corners */
+    overflow: hidden; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .project-details {
     flex: 1.5;
     padding: 30px;
-    min-width: 300px; /* Prevents squishing on mobile */
+    min-width: 300px; 
 }
 
 .project-media {
@@ -143,7 +143,6 @@ nav a {
     justify-content: center;
 }
 
-/* --- Streamlining Elements (The Feedback Fixes) --- */
 .project-meta {
     display: flex;
     gap: 20px;
@@ -193,7 +192,7 @@ nav a {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 4px;
@@ -226,16 +225,16 @@ footer {
 /* -------------------------- Mobile -------------------------- */
 @media (max-width: 768px) {
     .project-row {
-        flex-direction: column-reverse; /* Put video on top on mobile? Or standard column */
+        flex-direction: column-reverse; 
     }
     
     .project-media {
         width: 100%;
-        padding: 0; /* Remove padding so video touches edges */
+        padding: 0; 
     }
     
     .video-container {
-        border-radius: 0; /* Flat edges on mobile */
+        border-radius: 0; 
     }
     
     .project-details {
